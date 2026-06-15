@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRAND | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="topbar">
+      <div class="container topbar__container">
+        <div class="topbar__group">
+          <label class="topbar__label">
+            Language
+            <select class="topbar__select" aria-label="Language">
+              <option>EN</option>
+              <option>ES</option>
+            </select>
+          </label>
+          <label class="topbar__label">
+            Currency
+            <select class="topbar__select" aria-label="Currency">
+              <option>USD</option>
+              <option>EUR</option>
+            </select>
+          </label>
+        </div>
+        <div class="topbar__links">
+          <a class="topbar__link" href="#">Sign In</a>
+          <a class="topbar__link topbar__link--accent" href="#">Register</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="container header__container">
+        <div class="header__brand">BRAND</div>
+        <form class="header__search" action="#" method="get">
+          <select class="header__category" aria-label="Select category">
+            <option>All categories</option>
+            <option>Electronics</option>
+            <option>Fashion</option>
+            <option>Home</option>
+          </select>
+          <input class="header__input" type="search" placeholder="Search products, brands, categories" aria-label="Search">
+          <button class="header__button" type="submit">Search</button>
+        </form>
+        <div class="header__actions">
+          <a class="header__action" href="#">Profile</a>
+          <a class="header__action" href="#">Messages</a>
+          <a class="header__action" href="#">Orders</a>
+          <a class="header__action header__action--cart" href="#">Cart</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER CODE -->
+  <section class="main-banner container">
+    <div class="banner-text">
+      <p class="new-arrival">NEW ARRIVAL</p>
+      <h1>Upgrade your everyday<br>with premium electronics.</h1>
+      <div class="banner-btns">
+       <a class="btn-primary" href="category.html">Shop Now</a>
+<a class="btn-secondary" href="category.html">View Deals</a>
+      </div>
+    </div>
+    <img src="assets/images/laptop.jpg" alt="Electronics Banner">
+  </section>
+
+  <nav class="main-nav">
+    <div class="container main-nav__container">
+      <a class="main-nav__item main-nav__item--menu" href="#">☰ All Categories</a>
+      <a class="main-nav__item" href="#">Hot offers</a>
+      <a class="main-nav__item" href="#">Gift boxes</a>
+      <a class="main-nav__item" href="#">Projects</a>
+      <a class="main-nav__item" href="#">Menu item</a>
+      <a class="main-nav__item" href="#">Help</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section section--deals">
+      <div class="container section__container">
+        <div class="section__heading">
+          <span class="section__eyebrow">Limited time</span>
+          <h2 class="section__title">Deal of the day</h2>
+        </div>
+        <div class="deal-card">
+          <div class="deal-card__info">
+            <p class="deal-card__text">Get exclusive discounts on premium picks. Offer ends soon.</p>
+            <div class="deal-card__timer" id="deal-timer">
+  <div class="deal-card__segment"><strong id="days">00</strong><span>Days</span></div>
+  <div class="deal-card__segment"><strong id="hours">23</strong><span>Hours</span></div>
+  <div class="deal-card__segment"><strong id="minutes">59</strong><span>Minutes</span></div>
+  <div class="deal-card__segment"><strong id="seconds">59</strong><span>Seconds</span></div>
+</div>
+          </div>
+          <a class="button button--primary" href="#">Claim Offer</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--recommended">
+      <div class="container section__container">
+        <div class="section__heading">
+          <span class="section__eyebrow">Recommended</span>
+          <h2 class="section__title">Top picks for you</h2>
+        </div>
+        <div class="recommended__grid">
+          <article class="product-card">
+            <img class="product-card__image" src="assets/images/product-1.jpg" alt="Wireless earbuds">
+            <h3 class="product-card__title">Wireless Earbuds</h3>
+            <p class="product-card__price">$89.00</p>
+          </article>
+          <article class="product-card">
+            <img class="product-card__image" src="assets/images/product-2.jpg" alt="Smart watch">
+            <h3 class="product-card__title">DSLR Camera</h3>
+            <p class="product-card__price">$129.00</p>
+          </article>
+          <article class="product-card">
+            <img class="product-card__image" src="assets/images/product-3.jpg" alt="Designer headphones">
+            <h3 class="product-card__title">Designer Headphones</h3>
+            <p class="product-card__price">$179.00</p>
+          </article>
+          <article class="product-card">
+            <img class="product-card__image" src="assets/images/product-4.jpg" alt="Portable speaker">
+            <h3 class="product-card__title">Sofa Chair</h3>
+            <p class="product-card__price">$99.00</p>
+          </article>
+          <article class="product-card">
+            <img class="product-card__image" src="assets/images/product-5.jpg" alt="Smart home camera">
+            <h3 class="product-card__title">School Water Bottle</h3>
+            <p class="product-card__price">$149.00</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__container">
+      <div class="footer__column">
+        <h3 class="footer__title">BRAND</h3>
+        <p class="footer__text">Premium ecommerce experiences with fast delivery and trusted support.</p>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Shop</h4>
+        <a class="footer__link" href="#">New arrivals</a>
+        <a class="footer__link" href="#">Best sellers</a>
+        <a class="footer__link" href="#">Gift cards</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Support</h4>
+        <a class="footer__link" href="#">Help center</a>
+        <a class="footer__link" href="#">Shipping info</a>
+        <a class="footer__link" href="#">Returns</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__heading">Company</h4>
+        <a class="footer__link" href="#">About</a>
+        <a class="footer__link" href="#">Careers</a>
+        <a class="footer__link" href="#">Contact</a>
+      </div>
+    </div>
+        <div class="footer__bottom">
+      <p>© 2026 Brand. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+function updateDealTimer() {
+  let d = document.getElementById('days');
+  let h = document.getElementById('hours'); 
+  let m = document.getElementById('minutes');
+  let s = document.getElementById('seconds');
+  
+  let sec = parseInt(s.innerText) - 1;
+  let min = parseInt(m.innerText);
+  let hr = parseInt(h.innerText);
+  
+  if(sec < 0) { sec = 59; min--; }
+  if(min < 0) { min = 59; hr--; }
+  if(hr < 0) { hr = 23; min = 59; sec = 59; }
+  
+  h.innerText = hr < 10 ? '0' + hr : hr;
+  m.innerText = min < 10 ? '0' + min : min;
+  s.innerText = sec < 10 ? '0' + sec : sec;
+}
+setInterval(updateDealTimer, 1000);
+</script>
+</body>
+</html>

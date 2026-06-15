@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ShopHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ShopHub</h1>
+        <a href="category.html">← Back to Products</a>
+    </header>
+
+    <main class="product-detail">
+        <div class="products-grid">
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-1.jpg" alt="Wireless headphones"></a>
+              <h3 class="product-card__title"><a href="product.html">Wireless Headphones</a></h3>
+              <p class="product-card__price">$129.00</p>
+              <p class="product-card__rating">⭐☆</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('Wireless Headphones', 129.00)">Add to Cart</button>
+            </article>
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-2.jpg" alt="Smart watch"></a>
+              <h3 class="product-card__title"><a href="product.html">DSLR Camera </a></h3>
+              <p class="product-card__price">$199.00</p>
+              <p class="product-card__rating">⭐</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('DSLR Camera', 199.00)">Add to Cart</button>               
+            </article>
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-3.jpg" alt="Portable speaker"></a>
+              <h3 class="product-card__title"><a href="product.html">Portable Bluetooth Speaker</a></h3>
+              <p class="product-card__price">$89.00</p>
+              <p class="product-card__rating">⭐☆</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('Portable Bluetooth Speaker', 89.00)">Add to Cart</button>
+            </article>
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-4.jpg" alt="Action camera"></a>
+              <h3 class="product-card__title"><a href="product.html">sofa set</a></h3>
+              <p class="product-card__price">$149.00</p>
+              <p class="product-card__rating">⭐☆</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('sofa set', 149.00)">Add to Cart</button>
+            </article>
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-5.jpg" alt="Water Bottel"></a>
+              <h3 class="product-card__title"><a href="product.html">Water Bottle</a></h3>
+              <p class="product-card__price">$109.00</p>
+              <p class="product-card__rating">⭐</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('Water Bottel', 109.00)">Add to Cart</button>
+            </article>
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-6.jpg" alt="Laptop backpack"></a>
+              <h3 class="product-card__title"><a href="product.html">Pen Stock</a></h3>
+              <p class="product-card__price">$79.00</p>
+              <p class="product-card__rating">⭐☆</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('Pen Stock', 79.00)">Add to Cart</button>
+            </article>
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-7.jpg" alt="Smart Watches"></a>
+              <h3 class="product-card__title"><a href="product.html">Smart Watches</a></h3>
+              <p class="product-card__price">$69.00</p>
+              <p class="product-card__rating">⭐☆</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('Smart Watches', 69.00)">Add to Cart</button>
+            </article>
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-8.jpg" alt="Electrical kettel"></a>
+              <h3 class="product-card__title"><a href="product.html">Electrical kettel</a></h3>
+              <p class="product-card__price">$59.00</p>
+              <p class="product-card__rating">⭐</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('Electrical kettel', 59.00)">Add to Cart</button>
+            </article>
+            <article class="product-card">
+              <a href="product.html"><img class="product-card__image" src="assets/images/product-9.jpg" alt="Wireless charger"></a>
+              <h3 class="product-card__title"><a href="product.html">Gaming Mouse</a></h3>
+              <p class="product-card__price">$39.00</p>
+              <p class="product-card__rating">⭐☆</p>
+              <p class="product-card__shipping">Free Shipping</p>
+              <button class="btn-primary" onclick="addToCart('Gaming Mouse', 39.00)">Add to Cart</button>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({name: name, price: price, qty: 1});
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + ' added to cart!');
+            updateCartCount();
+        }
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let count = cart.length;
+            let cartLink = document.querySelector('nav a[href="cart.html"]');
+            if(cartLink) cartLink.textContent = 'Cart (' + count + ')';
+        }
+    </script>
+</body>
+</html>
